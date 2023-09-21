@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+    <link rel="stylesheet" href="stilo.css">
+</head>
+<body class="body">
+    <header class="header">
+        <img src="MECA.png" alt="logo" class="img" height="100px">
+        <button class="back-buttonn" onclick="window.history.back()">Voltar</button>
+    </header>
+    
+        <h1></h1>
+        <table>
+            <tr>
+                <th>Peças</th>
+                <th>Quantidade</th>
+                <th>Código</th>
+                <th>Data</th>
+                <th>Valor</th>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+            <tr>
+                <td>Jogo de Velas</td>
+                <td>10</td>
+                <td>12345</td>
+                <td>10/02/2023</td>
+                <td>R$ 300,00 </td>
+            </tr>
+            <tr>
+                <td>Pastilha de freio</td>
+                <td>15</td>
+                <td>67890</td>
+                <td>15/03/2023</td>
+                <td>R$ 50,00 </td>
+                
+            </tr>
+            <tr>
+                <td>Filtro de óleo</td>
+                <td>20</td>
+                <td>54321</td>
+                <td>10/04/2023</td>
+                <td>R$ 20,00 </td>
+            </tr>
+            <tr>
+                <td>Amortecedor dianteiro</td>
+                <td>5</td>
+                <td>98765</td>
+                <td>10/04/2023</td>
+                <td>R$ 199,99 </td>
+            </tr>
+            <tr>
+                <td>Bateria de carro</td>
+                <td>3</td>
+                <td>13579</td>
+                <td>14/05/2023</td>
+                <td>R$ 300,00 </td>
+            </tr>
+            <tr>
+                <td>Radiador</td>
+                <td>12</td>
+                <td>24680</td>
+                <td>18/05/2023</td>
+                <td>R$ 500,00 </td>
+            </tr>
+            <tr>
+                <td>Embreagem</td>
+                <td>2</td>
+                <td>11223</td>
+                <td>21/06/2023</td>
+                <td>R$ 550,00 </td>
+            </tr>
+            <tr>
+                <td>Alternador</td>
+                <td>8</td>
+                <td>99887</td>    
+                <td>25/07/2023</td>
+                <td>R$ 580,00 </td>          
+            </tr>
+            <!-- Continue adicionando linhas conforme necessário -->
+        </table>
+
+        <button class="edit-button" onclick="habilitarEdicao()">Editar</button>
+        <button class="save-button" onclick="salvarEdicao()" disabled>Salvar</button>
+        <button class="cancel-button" onclick="cancelarEdicao()" disabled>Cancelar</button>
+        
+        <script>
+            var originalContent = [];
+    
+            function habilitarEdicao() {
+                // Obtém todas as células da tabela, exceto o cabeçalho
+                var cells = document.querySelectorAll("table tr:not(:first-child) td");
+    
+                // Salva o conteúdo original das células e torna o conteúdo editável
+                cells.forEach(function(cell) {
+                    originalContent.push(cell.textContent);
+                    var input = document.createElement("input");
+                    input.setAttribute("type", "text");
+                    input.setAttribute("value", cell.textContent);
+                    input.classList.add("editable");
+                    cell.innerHTML = "";
+                    cell.appendChild(input);
+                });
+    
+                // Habilita os botões de "Salvar" e "Cancelar"
+                document.querySelector(".save-button").disabled = false;
+                document.querySelector(".cancel-button").disabled = false;
+    
+                // Desabilita o botão de "Editar"
+                document.querySelector(".edit-button").disabled = true;
+            }
+    
+            function salvarEdicao() {
+                var cells = document.querySelectorAll("table tr:not(:first-child) td");
+    
+                // Atualiza o conteúdo das células com os valores dos campos de entrada
+                cells.forEach(function(cell, index) {
+                    cell.textContent = originalContent[index];
+                });
+    
+                // Limpa o array de conteúdo original
+                originalContent = [];
+    
+                // Habilita o botão de "Editar"
+                document.querySelector(".edit-button").disabled = false;
+    
+                // Desabilita os botões de "Salvar" e "Cancelar"
+                document.querySelector(".save-button").disabled = true;
+                document.querySelector(".cancel-button").disabled = true;
+            }
+    
+            function cancelarEdicao() {
+                var cells = document.querySelectorAll("table tr:not(:first-child) td");
+    
+                // Restaura o conteúdo original das células
+                cells.forEach(function(cell, index) {
+                    cell.textContent = originalContent[index];
+                });
+    
+                // Limpa o array de conteúdo original
+                originalContent = [];
+    
+                // Habilita o botão de "Editar"
+                document.querySelector(".edit-button").disabled = false;
+    
+                // Desabilita os botões de "Salvar" e "Cancelar"
+                document.querySelector(".save-button").disabled = true;
+                document.querySelector(".cancel-button").disabled = true;
+            }
+        </script>
+    </body>
+    </html>

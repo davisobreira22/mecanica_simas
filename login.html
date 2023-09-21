@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <!-- Adicione o link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        
+        /* Estilos para o div que contém a imagem */
+        .container {
+            background-color:  #ffc56d; 
+            display: flex;
+            justify-content: left; /* Centraliza os elementos horizontalmente */
+            align-items: center; /* Centraliza os elementos verticalmente */
+            height: 100vb; /* Define a altura para ocupar a tela inteira */
+        }
+
+        .container1 {
+            flex: 1; /*Distribui igualmente o espaço disponível */
+            padding: 30px;  /*Adicione o espaçamento desejado */
+        }
+
+        .container1 img { /*controla o tamanho da tela a esquerda*/
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .container2 { /*controla o tamanho da tela da direita*/
+            background-color: #ffffff; /* Mantenha o fundo branco */
+            padding: 250px; 
+            text-align: center; 
+        }
+
+        .form-group { /*controla o espaçamento*/
+            margin-bottom: 40px;
+        }
+
+        .form-group label { /*controla as letras do titulo usuario e senha*/
+            display: block; 
+            padding: 10px;
+            font-weight: bold; /*fica me negrito*/
+              
+        }
+
+        .form-group input { /*area de escrever os dados*/  
+            padding: 10px;
+            border: 1px solid   #ffc56d; 
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    
+         .button { /*botao de confirmar*/
+            background-color:   #ffc56d; /*cor do botao*/
+            color: #f1f1f1; /*cor das letras*/
+            padding: 10px 20px;
+            border:  #ffc56d; /*cor da borda do botao*/
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+                 
+        }
+
+     
+        /* Estilizando o título h2 com a fonte Arial */
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="container1"> 
+            <!-- carrossel -->
+             
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores do carrossel -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Slides do carrossel (imagens) -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="MECA.png" alt="Imagem 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="trabalhando2.jpg" alt="Imagem 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="trabalhando.jpg" alt="Imagem 3">
+                    </div>
+                </div>
+
+                <!-- Controles do carrossel (o que acontece )-->
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+        </div>
+        <div class="container2"> 
+            <!-- o html de login -->
+            <h2>Login</h2>
+            <!-- é so colocar formulario.html no lugar dessa #, eu odeio minha vida -->
+            <form action="principal.html"> 
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <a href="cadastrar"></a>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    
+                    <a href="file:///C:/Users/dell_/OneDrive/Desktop/html/cadastrar-mecanica.html">Cadastrar </a>
+                </div>
+
+                <a href="file:///C:/Users/dell_/OneDrive/Desktop/html/esqueceu-senha.html">esqueceu a senha?</a>
+
+                <div class="form-group">
+                
+                 <button onclick="window.location.href='file:///C:/Users/dell_/OneDrive/Desktop/html/principal.html'" class="button" >Entrar</button> 
+                 
+               <!-- <a href="file:///C:/Users/dell_/OneDrive/Desktop/html/principal.html" class="button " >entrar</a> </div> -->
+               
+
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Adicione os scripts do Bootstrap no final do seu documento -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

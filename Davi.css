@@ -1,0 +1,159 @@
+ 
+ 
+ /* css do login */
+ 
+ 
+ /* Estilos para o div que contém a imagem */
+
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+  .container {
+    background-color:  #ffc56d; 
+    display: flex;
+    justify-content: left; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    height: 100vb; /* Define a altura para ocupar a tela inteira */
+}
+
+.container1 {
+    flex: 1; /*Distribui igualmente o espaço disponível */
+    padding: 30px;  /*Adicione o espaçamento desejado */
+}
+
+.container1 img { /*controla o tamanho da tela a esquerda*/
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container2 { /*controla o tamanho da tela da direita*/
+    background-color: #ffffff; /* Mantenha o fundo branco */
+    padding: 250px; 
+    text-align: center; 
+}
+
+.form-group { /*controla o espaçamento*/
+    margin-bottom: 40px;
+}
+
+.form-group label { /*controla as letras do titulo usuario e senha*/
+    display: block; 
+    padding: 10px;
+    font-weight: bold; /*fica me negrito*/
+      
+}
+
+.form-group input { /*area de escrever os dados*/  
+    padding: 10px;
+    border: 1px solid   #ffc56d; 
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.form-group button { /*botao de confirmar*/
+    background-color:   #ffc56d; /*cor do botao*/
+    color: #ffffff; /*cor das letras*/
+    padding: 10px 20px;
+    border:  #ffc56d; /*cor da borda do botao*/
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Estilizando o título h2 com a fonte Arial */
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* css de ordem de serviço  */
+
+.logo {
+    width: auto;
+    max-height: 90px; /* Define a altura máxima da imagem */
+    margin: 0 auto; /* Centraliza o logotipo */
+    display: flex; /* Adicione esta linha para centralizar a imagem */
+}
+
+ .container-text-center{ /*grid*/
+
+     background-color: #ffc56d;
+     vertical-align: center
+}
+.container { /*controla o container(o meio das informações)*/
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    
+    
+}
+
+
+
+label { /*coloca em negrito os titulos*/
+    font-weight: bold;
+}
+
+.form-group {  /*define o espaçamento */
+    margin-bottom: 20px;
+    
+}
+
+input[type="text"], textarea{ /*area para escrever*/
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffc56d;
+    border-radius: 5px;
+}
+
+table { /*area da planilia*/
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td { /*cor das linhas da planilia*/
+    border: 1px solid #000000;
+}
+
+th, td { /*espaçamento dos elementos da planilia*/
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #fdcf8a; /*cabeçalho da planilha*/
+    color: #fff;
+}
+
+.submit { /*botao de enviar servico*/
+        background-color: #ffffff;
+        color: #000000;
+        padding: 8px 20px;
+        border: solid  #ffc56d; /* Cor da borda so fica sem box shadow com o comando solid, se vc colocar border-color fica com o box shadow*/
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 250px; 
+}
+
+.back-buttonn{ /*botao de voltar */
+    background-color:#ffc56d ;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.row{
+    align-items: center; /*alinha o botao de voltar no meio*/
+}
+
+button:hover { /*escuresse quando o mouse passa em cima do botao de enviar serviço*/
+    background-color: #555;
+}
+

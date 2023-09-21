@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+}
+.header {
+    background-color: #ffc56d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.suceful-message{
+    display: flex;
+    justify-content: center; /* ajuste horizintal*/
+    align-items: center; /* ajuste vertical*/
+    height: 100vh; /* Isso faz com que a mensagem ocupe toda a altura da janela do navegador */
+    background-color: #ffffff; /* Cor de fundo da mensagem */
+}
+.suceful-message p {
+    font-size: 24px; /* Tamanho da fonte para a mensagem de sucesso */
+    color: green; /* Cor do texto da mensagem de sucesso */
+}
+.back-buttonn {
+    position: absolute; /* Use posicionamento absoluto para posicionar o botão */
+    left: 10px; /* Defina a posição esquerda para ajustar conforme necessário */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+ }
+ .form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: white;
+    box-shadow: 1px #ffff;
+    height: 500px;
+    
+ }
+ .img {
+    width: 100px;
+    height: 100px;
+    position: absolute; /* Adicione esta linha para usar posicionamento absoluto */
+    left: 50%; /* Centralize horizontalmente a logo */
+    transform: translateX(-50%); /* Centralize horizontalmente a logo */
+
+}
+ 

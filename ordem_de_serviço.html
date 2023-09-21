@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+    <title>Ordem de Serviço</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+         
+        .logo {
+            width: auto;
+            max-height: 90px; /* Define a altura máxima da imagem */
+            margin: 0 auto; /* Centraliza o logotipo */
+            display: flex; /* Adicione esta linha para centralizar a imagem */
+        }
+        
+         .container-text-center{ /*grid*/
+
+             background-color: #ffc56d;
+             vertical-align: center
+        }
+        .container { /*controla o container(o meio das informações)*/
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            
+            
+        }
+
+     
+        
+        label { /*coloca em negrito os titulos*/
+            font-weight: bold;
+        }
+
+        .form-group {  /*define o espaçamento */
+            margin-bottom: 20px;
+            
+        }
+
+        input[type="text"], textarea{ /*area para escrever*/
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ffc56d;
+            border-radius: 5px;
+        }
+
+        table { /*area da planilia*/
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td { /*cor das linhas da planilia*/
+            border: 1px solid #000000;
+        }
+
+        th, td { /*espaçamento dos elementos da planilia*/
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #fdcf8a; /*cabeçalho da planilha*/
+            color: #fff;
+        }
+
+        .submit { /*botao de enviar servico*/
+                background-color: #ffffff;
+                color: #000000;
+                padding: 8px 20px;
+                border: solid  #ffc56d; /* Cor da borda so fica sem box shadow com o comando solid, se vc colocar border-color fica com o box shadow*/
+                border-radius: 5px;
+                cursor: pointer;
+                margin-left: 250px; 
+        }
+        
+        .back-buttonn{ /*botao de voltar */
+            background-color:#ffc56d ;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+        .row{
+            align-items: center; /*alinha o botao de voltar no meio*/
+        }
+
+        button:hover { /*escuresse quando o mouse passa em cima do botao de enviar serviço*/
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- grid(topbar) -->
+    <div class="container-text-center">
+        
+        <div class="row">
+          <div class="col">
+            <button class="back-buttonn" onclick="window.history.back()">Voltar</button>
+          </div>
+          <div class="col">
+            <img src="MECA.png" alt="Logo da Oficina Mecânica" class="logo">
+          </div>
+          <div class="col"> 
+            <!-- aqui fica a terceira area do grid -->
+          </div>
+        </div>
+      </div>
+
+      <!-- o html para registar o cliente e descriçao de serviço -->
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" name="cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição do Serviço:</label>
+                <textarea id="descricao" name="descricao" rows="4" required></textarea>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="data">Data de Início:</label>
+                <input type="date" id="data" name="data" required>
+
+                <button class="submit">Enviar Ordem de Serviço</button>
+            </div>
+
+            <div class="form-group]">
+
+                <label for="orçamento">Orçamento:</label>
+                <input type="text" id="Orçamento" name="orçamento" required>
+    
+            </div>
+            
+        </form>
+
+        <!-- aqui fica os dados da planilia -->
+        <h2>Serviços sendo prestados</h2>
+        <table>
+            <tr>
+                <th>Cliente</th>
+                <th>Descrição do Serviço</th>
+                <th>Data de Início</th>
+                <th>Orçamento</th>
+            </tr>
+            <tr>
+                <td>João de Deus</td>
+                <td>Manutenção do motor</td>
+                <td>15/09/2023</td>
+                <td>R$ 500,00</td>
+            </tr>
+            <tr>
+                <td>Flor de Lis</td>
+                <td>Troca de velas</td>
+                <td>15/09/2023</td>
+                <td>R$ 200,00</td>
+            </tr>
+            <tr>
+                <td> Valdomiro Santiago</td>
+                <td>Amassado na porta</td>
+                <td>15/09/2023</td>
+                <td>R$ 800,00</td>
+            </tr>
+
+          
+ <!-- se quiser adicionar mais dados, coloque aqui -->
+        </table>
+    </div>
+    
+</body>
+</html>
+s

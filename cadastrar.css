@@ -1,0 +1,72 @@
+ body { /*cores de fundo*/
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+         /*topbar*/ 
+        .container-text-center{ /*grid*/
+
+            background-color: #ffc56d;
+            vertical-align: center
+        }
+
+    
+
+        .logo {
+            width: auto;
+            max-height: 90px; /* Define a altura máxima da imagem */
+            margin: 0 auto; /* Centraliza o logotipo */
+            display: flex; /* Adicione esta linha para centralizar a imagem */
+        }
+
+        /*centralizando as informações da logo*/
+        .row{
+            align-items: center; /*alinha o botao de voltar no meio*/
+        }
+
+ 
+        /* Navegação */
+        nav {
+            text-align: center;
+        }
+
+        /*funciona como container, oque ha no centro da imagem*/
+        ul { 
+            list-style-type: none;
+              padding: 5%;
+        }
+
+        li { /*editar espaçamento dos botões*/
+             
+            border-radius: 10%;
+            padding: 1%;
+           
+        }
+
+        /*o que ha dentro dos botoes e borda*/
+        a { 
+            text-decoration: none;
+            color:  #333;
+            font-size: 16px; /* Reduzir o tamanho da fonte para opções menores */
+            display: block;
+            padding: 8px 15px; /* Reduzir o preenchimento para opções menores */
+            background-color: #fff;
+            border: 1px solid #ffc56d;
+            border-radius: 5px;
+            
+        }
+        /*efeito de quando passar o mouse nos botoes*/
+        a:hover {
+            background-color: #ddd;
+            
+        }
+        
+        .back-buttonn{ /*botao de voltar */
+            background-color:#ffc56d ;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
