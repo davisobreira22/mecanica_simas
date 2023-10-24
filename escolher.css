@@ -1,6 +1,4 @@
-* {
-    margin: 0;
-}
+ 
 
 
 .container {
@@ -11,8 +9,9 @@
 }
 
 .body {
-    display: flex;
+     display: flex; 
     flex-direction: column;
+    
     background-color:white;
     font-family: Arial, sans-serif;
 }
@@ -41,9 +40,10 @@
 
 input{
     border: 1px solid #708090;
-    width: 70%;
+    width: 99%;
     height: 30px;
     border-color: #ffc56d;
+    
 }
 
 .back-buttonn {
@@ -87,14 +87,18 @@ table { /*area da planilia*/
 
 table, th, td { /*cor das linhas da planilia*/
     border: 1px solid #000000;
+    
 }
 
 th, td { /*espaçamento dos elementos da planilia*/
-    padding: 10px;
+    padding: 10px; /* Reduzi o espaçamento das células */
     text-align: center;
+    width: auto; /* Removi a largura fixa para permitir que a tabela se ajuste automaticamente */
 }
 
 th {
     background-color: #fdcf8a; /*cabeçalho da planilha*/
     color: #fff;
-}
+} 
+
+ 

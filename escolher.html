@@ -13,59 +13,111 @@
         <img src="MECA.png" alt="logo" class="img">
         <button class="back-buttonn" onclick="window.history.back()">Voltar</button>
     </header>
-    
-    <form action="atualizar.html">
+
     <div class="container">
-        <form class="form">
+        <form class="atualizar.html">
             <div class="left-align">
-                <p class="description">Digite o nome do produto a ser atualizado</p>
+                <p class="description">Digite a letra inicial do produto a ser atualizado</p>
             </div>
-                <label for="nome"></label>
-                <input class="nome" placeholder="" required type="text"></input>
-                
-                
-           <div>
+            <label for="nome"></label>
+            <input class="nome" placeholder="" required type="text" oninput="filterProducts(this.value)"></input>
 
-            <h2></h2>
-        <table>
-            <tr>
-                <th>N°</th>
-                <th>Nome</th>
-                <th>Quantidade</th>
-                <th>Preço</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Filtro de óleo</td>
-                <td>10</td>
-                <td>R$ 10,00</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Pastilha de freio</td>
-                <td>5</td>
-                <td>R$ 30,00</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Velas de ignição</td>
-                <td>7</td>
-                <td>R$ 100,00</td>
-            </tr>
+            <h2 id="productInfo"></h2>
+            <table id="productTable" style="display: none;">
+                <tr>
+                    <th>N°</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Filtro de óleo</td>
+                    <td>10</td>
+                    <td>R$ 10,00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Pastilha de freio</td>
+                    <td>5</td>
+                    <td>R$ 30,00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Velas de ignição</td>
+                    <td>7</td>
+                    <td>R$ 100,00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Volante</td>
+                    <td>3</td>
+                    <td>R$ 50,00</td>
+                </tr>
 
-          
- <!-- se quiser adicionar mais dados, coloque aqui -->
-        </table>
-    </div>
-            <button onclick="window.location.href=' file:///C:/Users/dell_/OneDrive/Desktop/html/atualizar.html'" class="button" >Confirmar</button> 
+                <tr>
+                    <td>5</td>
+                    <td>Valvula</td>
+                    <td>3</td>
+                    <td>R$ 50,00</td>
+                </tr>
 
+                <tr>
+                    <td>6</td>
+                    <td>Valvula de escape</td>
+                    <td>3</td>
+                    <td>R$ 50,00</td>
+                </tr>
+            </table>
+
+            <!-- Se quiser adicionar mais dados, coloque aqui -->
+             
         </form>
-        
+        <button onclick="window.location.href='file:///C:/Users/dell_/OneDrive/Desktop/html/atualizar.html'" class="button">Confirmar</button>
     </div>
-    
-    </body>
-     
-</form>
+
+    <script>
+        function filterProducts(initialLetter) {
+            const productInfoElement = document.getElementById("productInfo");
+            const productTable = document.getElementById("productTable");
+
+            if (initialLetter.length === 0) {
+                // Se o campo de filtro estiver vazio, ocultar todos os produtos
+                const productRows = productTable.querySelectorAll("tr");
+                for (let i = 1; i < productRows.length; i++) {
+                    productRows[i].style.display = "none";
+                }
+                productInfoElement.innerText = "";
+                productTable.style.display = "none";
+                return;
+            }
+
+            const productNameColumnIndex = 1; // Índice da coluna com os nomes dos produtos
+            const productRows = productTable.querySelectorAll("tr");
+
+            for (let i = 1; i < productRows.length; i++) { // Começa em 1 para ignorar o cabeçalho
+                const productNameCell = productRows[i].querySelectorAll("td")[productNameColumnIndex];
+                const productName = productNameCell.textContent.toLowerCase(); // Converter para minúsculas para fazer a correspondência
+
+                if (productName.startsWith(initialLetter.toLowerCase())) {
+                    productRows[i].style.display = "table-row"; // Mostrar a linha do produto
+                } else {
+                    productRows[i].style.display = "none"; // Ocultar a linha do produto
+                }
+            }
+
+            // Verificar se há correspondências
+            const matchingProducts = Array.from(productRows).slice(1).filter(row => row.style.display !== "none");
+
+            if (matchingProducts.length === 0) {
+                productInfoElement.innerText = "Nenhum produto corresponde à letra " + initialLetter;
+                productTable.style.display = "none";
+            } else {
+                productInfoElement.innerText = "";
+                productTable.style.display = "table-row-group";
+            }
+        }
+    </script>
 </body>
 
 </html>

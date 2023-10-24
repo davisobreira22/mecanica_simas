@@ -1,1 +1,0 @@
-# mecanica_simas
