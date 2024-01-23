@@ -513,8 +513,8 @@ form .btn {
 form .btn button {
     height: auto;
     width: 100%;
-   
-    
+    border: 1px solid #444;
+    outline: none;
     background: #ff6700;
     color: #000;
     font-size: 20px;
@@ -528,14 +528,10 @@ form .btn button {
 form .btn button:hover {
     background: #fffefe;
 }
-@media only screen and (max-width: 900px) {
-    .container-star {
-        padding: 10px; /* Ajuste o espaçamento conforme necessário */
-    }
 
+@media only screen and (max-width: 900px) {
     .star-widget label {
-        font-size: 24px;
-        padding: 8px;
+        font-size: 25px;
     }
 
     form .textarea textarea {
@@ -544,5 +540,23 @@ form .btn button:hover {
 
     form .btn button {
         font-size: 14px;
+    }
+}
+
+/* para telas menores do tamanho de 370px */
+
+@media only screen and (max-width: 360px) {
+    .star-widget label {
+        font-size: 18px;
+        padding: 6px; /* Ajuste o espaçamento conforme necessário */
+        margin: 2px;
+    }
+
+    form .textarea textarea {
+        font-size: 10px;
+    }
+
+    form .btn button {
+        font-size: 12px;
     }
 }
