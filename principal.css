@@ -276,6 +276,7 @@ max-width: 25em;
         overflow-y: hidden;
         transition: 0.6s ease-in-out;
       }
+      
     
       .menu-open {
         height: 17em;
@@ -284,6 +285,7 @@ max-width: 25em;
     
       .menu li {
         display: block;
+        margin-top: 1.3em;
         
       }
     
@@ -304,6 +306,9 @@ max-width: 25em;
     
       .info img {
         margin: 0 0 1em 0;
+        width: 50%;
+        right: auto;
+        margin-top: 2em;
       }
 }
 
@@ -322,15 +327,17 @@ max-width: 25em;
     height: 10em;
     flex: 0 0 48%; /* Adicionado para ajustar a largura dos itens de contato em telas menores */
     margin-top: 20px;
-    
-     
 }
 
  
 .contact-info i {
     
     color: #ff6700;
-
+     
+}
+.contact-info a{
+    padding-left: 1em;
+    color: #000;
 }
 
 
@@ -371,4 +378,167 @@ max-width: 25em;
     }
     
 }
- 
+  .container-star {
+     
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-star.post {
+    display: none;
+}
+
+.container-star .text {
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+}
+
+.container-star .edit {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.container-star.edit:hover {
+    text-decoration: underline;
+}
+
+.container-star .star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 40px;
+    color: #000;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+    color: #ff6700;
+}
+
+input:checked ~ label {
+    color: #ff6700;
+}
+
+input#rate-5:checked ~ label {
+    color: #ff6700;
+    
+}
+
+#rate-1:checked ~ form .custom-header:before {
+    content: "Péssima ";
+}
+
+#rate-2:checked ~ form .custom-header:before {
+    content: "Ruim";
+}
+
+#rate-3:checked ~ form .custom-header:before {
+    content: "Ok";
+}
+
+#rate-4:checked ~ form .custom-header:before {
+    content: "Muito boa";
+}
+
+#rate-5:checked ~ form .custom-header:before {
+    content: "Incrível";
+}
+
+.container-star form {
+    display: none;
+}
+
+input:checked ~ form {
+    display: block;
+}
+
+form .custom-header {
+    width: 100%;
+    font-size: 25px;
+    color: #141414;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+form .textarea {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+form .textarea textarea {
+    height: auto;
+    width: 100%;
+    outline: none;
+    color: #000;
+    border: 1px solid #333;
+    background: #ecf0f1;
+    padding: 10px;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    resize: none;
+}
+
+.form-dark textarea:focus {
+    border-color: #444;
+}
+
+.textarea textarea:focus {
+    border-color: #444;
+}
+
+form .btn {
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+form .btn button {
+    height: auto;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #ff6700;
+    color: #000;
+    font-size: 20px;
+  
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+form .btn button:hover {
+    background: #fffefe;
+}
+
+@media only screen and (max-width: 400px) {
+    .star-widget label {
+        font-size: 24px;
+    }
+
+    form .textarea textarea {
+        font-size: 12px;
+    }
+
+    form .btn button {
+        font-size: 14px;
+    }
+}
