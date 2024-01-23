@@ -513,8 +513,8 @@ form .btn {
 form .btn button {
     height: auto;
     width: 100%;
-    border: 1px solid #444;
-    outline: none;
+   
+    
     background: #ff6700;
     color: #000;
     font-size: 20px;
@@ -529,9 +529,10 @@ form .btn button:hover {
     background: #fffefe;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 900px) {
     .star-widget label {
         font-size: 24px;
+        padding: 8px;
     }
 
     form .textarea textarea {
