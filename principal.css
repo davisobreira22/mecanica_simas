@@ -279,7 +279,7 @@ max-width: 25em;
       
     
       .menu-open {
-        height: 17em;
+        height: 21em;
         padding: 5em 0 1em 0;
       }
     
@@ -381,6 +381,7 @@ max-width: 25em;
   .container-star {
      
     width: 100%;
+    height: auto;
     padding: 20px 30px;
     border-radius: 5px;
     display: flex;
@@ -549,7 +550,7 @@ form .btn button:hover {
     .star-widget label {
         font-size: 18px;
         padding: 6px; /* Ajuste o espaçamento conforme necessário */
-        margin: 2px;
+        margin: 5px;
     }
 
     form .textarea textarea {

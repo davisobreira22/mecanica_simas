@@ -603,91 +603,31 @@ s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.
     <div class="container">
         <div class="content first-content">
             <div class="first-column">
-                <h2 class="title title-primary">Cadastro</h2>
-                <p class="description description-primary">Já tem uma conta?</p>
+                <h2 class="title title-primary">Esqueceu a senha?</h2>
+                <p class="description description-primary">Coloque seu email que enviaremos <br>uma mensagem de verificação</p>
                 
-                <button id="signin" class="btn btn-primary">Login</button>
+                 
             </div>    
             <div class="second-column">
-                <h2 class="title title-second">Crie sua conta</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                         
-
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- social media -->
-                <p class="description description-second">ou use seu email para registrar-se:</p>
+                <h2 class="title title-second">Escreva seu email</h2>
+                 
+           
+               
                 <form class="form">
-                    <label class="label-input" for="">
-                        <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Nome">
-                    </label>
-                    
+                 
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
                         <input type="email" placeholder="Email">
                     </label>
                     
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
-                    </label>
+                   
                     
                     
-                    <button class="btn btn-second">cadastrar</button>        
+                    <button class="btn btn-second">confirmar</button>        
                 </form>
             </div><!-- second column -->
-        </div><!-- first content -->
-        <div class="content second-content">
-            <div class="first-column">
-                <h2 class="title title-primary">Login</h2>
-                <p class="description description-primary">Não tem uma conta?</p>
-                <button id="signup" class="btn btn-primary">Cadastrar</button>
-            </div>
-            <div class="second-column">
-                <h2 class="title title-second">Login</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- social media -->
+         
                 
-                <form class="form">
-                
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
-                    </label>
-                
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
-                    </label>
-                
-                    <a class= "password" href="esqueceu-a-senha.html" id="esqueceusenha-link">Esqueceu a senha?</a>
-                    <button class="btn btn-second">Entrar</button>
-                </form>
             </div><!-- second column -->
         </div><!-- second-content -->
     </div>
@@ -697,32 +637,8 @@ s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.
   
  
 
-var btnSignin = document.querySelector("#signin");
-var btnSignup = document.querySelector("#signup");
-
-var body = document.querySelector("body");
-
-
-btnSignin.addEventListener("click", function () {
-   body.className = "sign-in-js"; 
-});
-
-btnSignup.addEventListener("click", function () {
-    body.className = "sign-up-js";
-})
-
-document.addEventListener("DOMContentLoaded", function () {
-        // ... (seu código existente) ...
-
-        const loginLink = document.getElementById('esqueceusenha-link');
-
-        // Adiciona um ouvinte de evento de clique ao link de login
-        loginLink.addEventListener('click', function (event) {
-            event.preventDefault(); // Evita o comportamento padrão do link
-            // Redireciona para a página login.html
-            window.location.href = 'esqueceu-a-senha.html';
-        });
-    });
+ 
+ 
     </script>
 </body>
 </html>
